@@ -13,6 +13,8 @@
 		2D207DF32B000A4F007EACE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D207DF12B000A4F007EACE6 /* Main.storyboard */; };
 		2D207DF52B000A50007EACE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D207DF42B000A50007EACE6 /* Assets.xcassets */; };
 		2D207DF82B000A50007EACE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D207DF62B000A50007EACE6 /* LaunchScreen.storyboard */; };
+		2D207E062B00252B007EACE6 /* Dogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D207E052B00252A007EACE6 /* Dogs.swift */; };
+		2D207E082B00352D007EACE6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D207E072B00352D007EACE6 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2D207DF42B000A50007EACE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D207DF72B000A50007EACE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D207DF92B000A50007EACE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D207E052B00252A007EACE6 /* Dogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dogs.swift; sourceTree = "<group>"; };
+		2D207E072B00352D007EACE6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		2D207DEA2B000A4F007EACE6 /* WorkWithAPI */ = {
 			isa = PBXGroup;
 			children = (
-				2D207DEB2B000A4F007EACE6 /* AppDelegate.swift */,
-				2D207DED2B000A4F007EACE6 /* SceneDelegate.swift */,
-				2D207DEF2B000A4F007EACE6 /* ViewController.swift */,
-				2D207DF12B000A4F007EACE6 /* Main.storyboard */,
-				2D207DF42B000A50007EACE6 /* Assets.xcassets */,
-				2D207DF62B000A50007EACE6 /* LaunchScreen.storyboard */,
-				2D207DF92B000A50007EACE6 /* Info.plist */,
+				2D207E032B000B03007EACE6 /* App */,
+				2D207DFF2B000A85007EACE6 /* Model */,
+				2D207E012B000ACA007EACE6 /* ViewControllers */,
+				2D207E022B000ADE007EACE6 /* StoryBoards */,
+				2D207E042B000B12007EACE6 /* Resources */,
 			);
 			path = WorkWithAPI;
+			sourceTree = "<group>";
+		};
+		2D207DFF2B000A85007EACE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D207E052B00252A007EACE6 /* Dogs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D207E012B000ACA007EACE6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D207DEF2B000A4F007EACE6 /* ViewController.swift */,
+				2D207E072B00352D007EACE6 /* ImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2D207E022B000ADE007EACE6 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				2D207DF12B000A4F007EACE6 /* Main.storyboard */,
+				2D207DF62B000A50007EACE6 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		2D207E032B000B03007EACE6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2D207DEB2B000A4F007EACE6 /* AppDelegate.swift */,
+				2D207DED2B000A4F007EACE6 /* SceneDelegate.swift */,
+				2D207DF92B000A50007EACE6 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2D207E042B000B12007EACE6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D207DF42B000A50007EACE6 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +186,8 @@
 			files = (
 				2D207DF02B000A4F007EACE6 /* ViewController.swift in Sources */,
 				2D207DEC2B000A4F007EACE6 /* AppDelegate.swift in Sources */,
+				2D207E082B00352D007EACE6 /* ImageViewController.swift in Sources */,
+				2D207E062B00252B007EACE6 /* Dogs.swift in Sources */,
 				2D207DEE2B000A4F007EACE6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +342,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9YZ66R8B68;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WorkWithAPI/Info.plist;
+				INFOPLIST_FILE = WorkWithAPI/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -307,9 +355,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MaksGridenko.WorkWithAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9YZ66R8B68;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WorkWithAPI/Info.plist;
+				INFOPLIST_FILE = WorkWithAPI/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,9 +386,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.MaksGridenko.WorkWithAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
