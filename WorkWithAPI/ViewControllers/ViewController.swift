@@ -8,13 +8,7 @@
 import UIKit
 
 
-enum Link {
-    case dogsURL
-    
-    var url: URL{
-        URL(string: "https://dog.ceo/api/breeds/image/random")!
-    }
-}
+
 // MARK: - виды ответов алертов
 enum Alert {
     case success

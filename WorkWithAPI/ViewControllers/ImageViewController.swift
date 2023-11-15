@@ -6,30 +6,29 @@
 //
 
 import UIKit
-// MARK: - на доработку для следующей домашки
 
-class ImageViewController: UIViewController {
 
+final class ImageViewController: UIViewController {
+    
+    private let networkManager = NetworkManager.shared
+    
     @IBOutlet weak var dogsImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchImageDogs()
+        
     }
     private func fetchImageDogs() {
-        URLSession.shared.dataTask(with: Link.dogsURL.url) { data, response, error in
-            guard let data = data, let response = response else {
-                print(error?.localizedDescription ?? "No error description")
-                return
+        networkManager.fetchDog(url: Link.dogsURL.url) { url in
+            self.networkManager.fetchImage(from: url) { result in
+                switch result {
+                case .success(let data):
+                    self.dogsImageView.image = UIImage(data: data)
+                case .failure(let error):
+                    print(error)
+                }
             }
-            guard let image = UIImage(data: data) else { return }
-            
-            DispatchQueue.main.async { // класс отвечает за работу с потоком, main основное поток
-                self.dogsImageView.image = image
-            }
-            print(response)
-        }.resume() // обязательно нужно вызвать что бы сетевой запрос осуществился
+        }
     }
 }
-  
-
-

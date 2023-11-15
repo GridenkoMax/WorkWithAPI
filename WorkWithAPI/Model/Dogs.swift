@@ -8,6 +8,6 @@
 import Foundation
 //Decodable протокол декодировки, что бы можно было работать в методе decode
 struct Dogs: Decodable {
-    let message: String?
+    let message: URL
     let status: String?
 }
