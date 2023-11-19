@@ -20,9 +20,11 @@ final class ImageViewController: UIViewController {
         
     }
     private func fetchImageDogs() {
+        //вызываем fetchDog в который передаем ссылку на наш url
+      // когда Alamofire успешно преобразует JSON-ответ в словарь, вызываетсяы замыкание completion, которое получает URL, с изображением собаки
         networkManager.fetchDog(url: Link.dogsURL.url) { url in
-            self.networkManager.fetchImage(from: url) { result in
-                switch result {
+            self.networkManager.fetchImage(from: url) { result in // метод для загрузки и отображения изображения
+                switch result { // в зависимости от результата загрузки,либо устанавливаем в dogsImageView изображение, либо в failure выводим ошибку
                 case .success(let data):
                     self.dogsImageView.image = UIImage(data: data)
                 case .failure(let error):

@@ -30,7 +30,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="dogsButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZpW-YO-H11"/>
                                     <segue destination="LXR-mz-hTJ" kind="show" id="qZA-v0-djr"/>
                                 </connections>
                             </button>
